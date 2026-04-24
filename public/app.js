@@ -3,7 +3,7 @@ const clearBtn = document.getElementById("clearBtn");
 const edgesInput = document.getElementById("edgesInput");
 const errorBox = document.getElementById("errorBox");
 const resultBox = document.getElementById("result");
-const BASE_URL = "https://your-backend-url.onrender.com";
+const BASE_URL = "";
 
 function parseInput(value) {
   return value
