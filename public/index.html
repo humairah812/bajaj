@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hierarchy Analyzer | BFHL</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <main class="container">
+      <header>
+        <h1>Hierarchy Analyzer</h1>
+        <p>
+          Paste node edges (example: <code>A-&gt;B</code>) one per line or comma
+          separated, then analyze with <code>POST /bfhl</code>.
+        </p>
+      </header>
+
+      <section class="panel">
+        <label for="edgesInput">Input edges</label>
+        <textarea id="edgesInput" rows="8" spellcheck="false">
+A->B, A->C, B->D, C->E, E->F, X->Y, Y->Z, Z->X, P->Q, Q->R, G->H, G->H, G->I, hello, 1->2, A->
+        </textarea>
+        <div class="actions">
+          <button id="analyzeBtn">Analyze</button>
+          <button id="clearBtn" class="secondary">Clear</button>
+        </div>
+      </section>
+
+      <section id="errorBox" class="error hidden"></section>
+      <section id="result" class="hidden"></section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

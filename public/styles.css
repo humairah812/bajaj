@@ -1,0 +1,155 @@
+:root {
+  --bg: #0b1220;
+  --panel: #121a2b;
+  --panel-soft: #1a2438;
+  --text: #e8ecf3;
+  --text-muted: #afbdd3;
+  --accent: #61a5ff;
+  --accent-2: #7be4c4;
+  --danger: #ff7b7b;
+  --border: #2a3653;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 700px at 10% 5%, #1a2a48, transparent), var(--bg);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto 3rem;
+  padding: 0 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.4rem;
+}
+
+header p {
+  margin-top: 0;
+  color: var(--text-muted);
+}
+
+.panel {
+  background: linear-gradient(160deg, var(--panel), var(--panel-soft));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+textarea {
+  margin-top: 0.6rem;
+  width: 100%;
+  resize: vertical;
+  min-height: 160px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0a1221;
+  color: var(--text);
+  padding: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.actions {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4f8df5, #6bb8ff);
+  color: white;
+}
+
+button.secondary {
+  background: #243250;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  margin-top: 1rem;
+  background: #2c1721;
+  border: 1px solid #6d2a43;
+  color: #ffbdcd;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+}
+
+#result {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+
+.card {
+  background: #101a2d;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.card .k {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.card .v {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+
+.hierarchy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.8rem;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  background: #1e2d4a;
+  border: 1px solid #304973;
+}
+
+.chip.cycle {
+  background: #3a1f2c;
+  border-color: #7d3952;
+  color: #ffbfcb;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #0a1221;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 0.8rem;
+  overflow-x: auto;
+}
